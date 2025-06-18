@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html lang="en" xmlns:jsp="http://java.sun.com/JSP/Page">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Confirmation</title>
+    <style>
+        .header-bar{
+            background-color: #c9ccc9;
+            padding: 15px 20px;
+            display: flex;
+            align-items: initial;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<body>
+<div id="header-bar-container"></div>
+<script>
+    fetch('header-bar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-bar-container').innerHTML = html;
+        });
+</script>
+</body>
+
+
+
+<h1 style="text-align: center;">Payment Confirmation</h1>
+
+<!-- Id "movie_list_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+<p style="text-align: center;">Your order as been put in!</p>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="paymentpage.js"></script>
+
+</body>
+
+
+</html>

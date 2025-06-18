@@ -1,0 +1,9 @@
+.idea/
+target/
+movie-data.sql
+./movie-data.sql
+./.DS_Store
+**/.DS_Store
+stanford-movies/
+
+project1/src/main/resources/

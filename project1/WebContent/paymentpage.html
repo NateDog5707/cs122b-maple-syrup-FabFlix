@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en" xmlns:jsp="http://java.sun.com/JSP/Page">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Payment Page</title>
+    <style>
+        .header-bar{
+            background-color: #c9ccc9;
+            padding: 15px 20px;
+            display: flex;
+            align-items: initial;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<body>
+<div id="header-bar-container"></div>
+<script>
+    fetch('header-bar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-bar-container').innerHTML = html;
+        });
+</script>
+</body>
+
+
+
+<h1>Payment Page</h1>
+
+<!-- Id "movie_list_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+<h2 id="cartTotalMsg"></h2>
+
+<form id="paymentInfoForm" method="post">
+    Cardholder First Name: <input type="text" id="firstName" name="firstName"><br>
+    Cardholder Last Name:<input type="text" id="lastName" name="lastName"><br>
+    Credit Card Number:<input type="text" id="cardNumber" name="cardNumber"><br>
+    Expiration Date: <input type="date" id="expirationDate" name="expirationDate"><br>
+
+    <input type="submit" value="Submit Payment">
+</form>
+<p id ="errorMsg" style="display:none; color:red;"></p>
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="paymentpage.js"></script>
+
+</body>
+
+
+</html>

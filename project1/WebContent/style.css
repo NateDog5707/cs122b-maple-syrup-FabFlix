@@ -1,0 +1,5 @@
+.autocomplete-selected .movie-suggestion {
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: black;
+}

@@ -1,0 +1,21 @@
+Start of inconsistency log file
+MySAXParser: Writing to file
+
+Elements read: 320512
+Elements split: 40
+Genres corrected: 8736
+Repeat movies: 57
+Other inconsistencies: 595
+Escape characters formatted: 24116
+
+ActorParser: Writing to file
+
+Elements read: 104422
+Incorrect DOB: 2518
+Repeat movies: 20
+
+CastParser: Writing to file
+
+Elements read: 328453
+Escape characters formatted: 46919
+

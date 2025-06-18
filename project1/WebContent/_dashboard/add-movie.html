@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Add Movie</title>
+</head>
+
+<body>
+<h1>Add a Movie</h1>
+<p><a href="menu.html">Jump to Menu</a></p>
+<form id="addMovieForm" METHOD="POST">
+    Title: <input type="text" id="movie_title" name="movie_title" required><br>
+    Director: <input type="text" id="movie_director" name="movie_director" required><br>
+    Year: <input type="text" id="movie_year" name="movie_year" required><br>
+    Genre: <input type="text" id="genre_name" name="genre_name" required><br>
+    Star: <input type="text" id="star_name" name="star_name" required><br>
+    Birth Year: <input type="text" id="star_birth_year" name="star_birth_year"><br>
+    <span id="yearError" style="color:red; display:none;">Please enter a valid year</span><br>
+    <input id="SubmitButton" TYPE="SUBMIT" VALUE="Submit">
+</form>
+<p id="errorMsg" style="display:none; color:red;"></p>
+<p id="successMsg" style="display:none; color:green;"></p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="add-movie.js"></script>
+</body>
+</html>

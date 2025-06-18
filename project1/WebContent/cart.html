@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Shopping Cart</title>
+</head>
+<body>
+
+<div id="header-bar-container"></div>
+<script>
+    fetch('header-bar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-bar-container').innerHTML = html;
+        });
+</script>
+
+<h1>Your Shopping Cart</h1>
+<h3><a href="paymentpage.html"> --> Proceed to Payment</a></h3>
+
+<!-- H3 body is left empty here, will be populated with the data retrieved with single-star.js -->
+<!-- single-star.js will find this html element by it's id "star_info" -->
+<h3 id="cart-info"></h3>
+<p id="cartTotalCost" style="align-content: end">Cart Total: ERROR</p>
+<table id="cart-table" class="table table-striped">
+    <thead>
+    <tr>
+        <th><!--Buttons space--></th>
+        <th>Movie</th>
+        <th>Base Price</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+
+        <th>
+    </tr>
+    </thead>
+
+    <!-- Table body is left empty here, will be populated with the data retrieved with single-star.js -->
+    <!-- single-star.js will find this html element by it's id "movie_table_body" -->
+    <tbody id=cart-table-body></tbody>
+</table>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="cart.js"></script>
+</body>
+
+
+</html>

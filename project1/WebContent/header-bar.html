@@ -1,0 +1,23 @@
+<head>
+    <style>
+    .header-bar{
+        background-color: #c9ccc9;
+        padding: 15px 20px;
+        display: flex;
+        align-items: initial;
+        justify-content: space-between;
+    }
+    </style>
+</head>
+
+<div class = "header-bar">
+    <form id="toMovieListForm" action ="movie-list.html" method="post">
+        <input id="toMovieListButton" type="submit" value="Movie List">
+    </form>
+    <form id="toCartForm" action= "cart.html" method="post">
+        <input id="toCartButton" type="submit"  value="Checkout">
+    </form>
+    <form id="logoutForm" action= "api/logout" method="post">
+        <input id="logoutButton" type="submit" value="Logout">
+    </form>
+</div>

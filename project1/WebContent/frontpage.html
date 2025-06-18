@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Front Page</title>
+  <style>
+    .center-text {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div id="header-bar-container"></div>
+<script>
+  fetch('header-bar.html')
+          .then(response => response.text())
+          .then(html => {
+            document.getElementById('header-bar-container').innerHTML = html;
+          });
+</script>
+
+<h3 id="welcomeMessage" style="color:red;">Error</h3>
+
+<h2 style="align-content: center">Search</h2>
+<form id="search" style="margin-bottom: 300px">
+  Title: <input type="text" id="autocomplete" name="title" required>
+  <input type="submit" value="Search">
+</form>
+<p>
+<div id="genre_browse">
+  <h2>Browse by Genre:</h2>
+</div>
+<div id="title_browse">
+  <h2>Browse by Title:</h2>
+</div>
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+
+
+<script src="cart.js"></script>
+<script src="frontpage.js"></script>
+<script src="full-text-search.js"></script>
+<script src="browse.js"></script>
+</body>
+</html>
